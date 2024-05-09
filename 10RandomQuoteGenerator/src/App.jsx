@@ -6,7 +6,7 @@ function App() {
     fetch("https://api.adviceslip.com/advice")
       .then((res) => res.json())
       .then((data) => {
-        const { advice } = data.slip.advice;
+        const { advice } = data.slip;
         setAdvice(advice);
       });
   };
