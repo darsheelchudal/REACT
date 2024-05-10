@@ -1,30 +1,26 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 //b8036408
-import './App.css';
-import SearchIcon from './search.svg';
+import "./App.css";
+import SearchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
 
 const API_URL = "http://www.omdbapi.com/?apikey=b8036408";
 
-
-
 const App = () => {
   //state
-  const [searchTerm,setSearchTerm]=useState("");
-  const [movies,setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [movies, setMovies] = useState([]);
 
-  
   useEffect(() => {
-   searchMovies('Spiderman');
-       
+    searchMovies("titanic");
   }, []);
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-       setMovies(data.Search);
-  }
-  return(
+    setMovies(data.Search);
+  };
+  return (
     <div className="app">
       <h1>MovieLand</h1>
 
@@ -53,7 +49,7 @@ const App = () => {
         </div>
       )}
     </div>
-  );  
-}
+  );
+};
 
 export default App;
