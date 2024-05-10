@@ -73,9 +73,7 @@ function App() {
           <h1>Min temp : {data.main && data.main.temp_min} </h1>
           <h1>Humidity : {data.main && data.main.humidity}</h1>
         </div>
-        <div className="my-3">
-          <h2>Wind speed : {data.wind.speed} </h2>
-        </div>
+
         <div className="MinTemo">
           <h1>Max Temp: {data.main && data.main.temp_max} </h1>
           <h1>Precipitation : {data.weather && data.weather[0].description}</h1>
