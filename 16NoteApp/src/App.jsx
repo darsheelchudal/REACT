@@ -8,6 +8,9 @@ function App() {
   const [count, setCount] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const remove = (id) => {
+    setNotes(notes.filter((e) => e.key !== id));
+  };
   const addNote = () => {
     if (!title || !desc) {
       setErrorMessage("Enter required input");
@@ -81,6 +84,7 @@ function App() {
                   className="block w-20 select-none rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none my-4"
                   type="button"
                   data-ripple-light="true"
+                  onClick={() => remove(note.key)}
                 >
                   Delete
                 </button>
