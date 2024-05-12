@@ -75,13 +75,12 @@ function App() {
               className="mx-20 my-3 w-60 h-40 border-pink-400 border-4 flex items-center p-4"
             >
               <div className="notes">
-                <h1>Title: {notes.title}</h1>
-                <p>Note: {notes.desc}</p>
+                <h1>Title: {note.title}</h1>
+                <p>Note: {note.desc}</p>
                 <button
                   className="block w-20 select-none rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none my-4"
                   type="button"
                   data-ripple-light="true"
-                  onClick={addNote}
                 >
                   Delete
                 </button>
