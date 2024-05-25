@@ -11,7 +11,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?i=${search}&apikey=${apiKey}`
+          `http://www.omdbapi.com/?s=${search}&apikey=${apiKey}`
         );
         const data = await response.json();
         setMovie(data);
@@ -20,7 +20,7 @@ function App() {
       }
     };
     fetchData();
-  }, [search]);
+  }, [search, apiKey]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
