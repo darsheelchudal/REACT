@@ -1,12 +1,14 @@
-import { useState } from "react";
+import React from "react";
+import Task from "./components/Task";
+import TaskList from "./components/TaskList";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="p-4 mx-[40%] bg-sky-400">
+      <Task />
+      <br></br>
+      <TaskList />
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
-import taskReducer from "./taskReducers";
 import { combineReducers } from "redux";
+import taskReducer from "../slice/taskReducers";
 
 const rootReducer = combineReducers({
   tasks: taskReducer,
